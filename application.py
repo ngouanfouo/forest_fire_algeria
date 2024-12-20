@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import numpy as np
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 # Load the pickled scaler and model
 with open('scaler.pkl', 'rb') as f:
@@ -12,11 +12,11 @@ with open('scaler.pkl', 'rb') as f:
 with open('ridge.pkl', 'rb') as f:
     model = pickle.load(f)
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST','GET'])
+@application.route('/predict', methods=['POST','GET'])
 def predict():
     # Get input values from the 
     
@@ -45,4 +45,4 @@ def predict():
     return render_template('result.html', prediction=prediction)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
