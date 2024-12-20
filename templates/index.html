@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FWI Prediction</title>
+</head>
+<body>
+    <h1>FWI Prediction</h1>
+    <form method="POST" action="/predict">
+        <label for="Temperature">Temperature:</label>
+        <input type="text" id="Temperature" name="Temperature"><br><br>
+        <label for="RH">Relative Humidity (RH):</label>
+        <input type="text" id="RH" name="RH"><br><br>
+        <label for="Ws">Wind Speed (Ws):</label>
+        <input type="text" id="Ws" name="Ws"><br><br>
+        <label for="Rain">Rainfall (Rain):</label>
+        <input type="text" id="Rain" name="Rain"><br><br>
+        <label for="FFMC">Fine Fuel Moisture Code (FFMC):</label>
+        <input type="text" id="FFMC" name="FFMC"><br><br>
+        <label for="ISI">Initial Spread Index (ISI):</label>
+        <input type="text" id="ISI" name="ISI"><br><br>
+        <label for="BUI">Buildup Index (BUI):</label>
+        <input type="text" id="BUI" name="BUI"><br><br>
+        <label for="Classes">Classes:</label>
+        <input type="text" id="Classes" name="Classes"><br><br>
+        <label for="Region">Region:</label>
+        <input type="text" id="Region" name="Region"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
